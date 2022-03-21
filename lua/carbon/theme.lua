@@ -238,14 +238,14 @@ function M.setup(config)
     TSOperator = { fg = c.fg }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter = { fg = c.cyan2 }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
-    TSProperty = { fg = c.purple1 }, -- Same as `TSField`.
+    TSProperty = { fg = c.purple }, -- Same as `TSField`.
     -- TSPunctDelimiter = { fg = c.blue5 }, -- For delimiters ie: `.`
     TSPunctBracket = { fg = c.fg_dark }, -- For brackets and parens.
     TSPunctSpecial = { fg = c.dark5 }, -- For special punctutation that does not fall in the catagories before.
     -- TSRepeat            = { };    -- For keywords related to loops.
     -- TSString            = { };    -- For strings.
     TSStringRegex = { fg = c.cyan1 }, -- For regexes.
-    TSStringEscape = { fg = c.magenta }, -- For escape characters within a string.
+    TSStringEscape = { fg = c.cyan2 }, -- For escape characters within a string.
     -- TSSymbol            = { };    -- For identifiers referring to symbols or atoms.
     -- TSType              = { };    -- For types.
     -- TSTypeBuiltin       = { };    -- For builtin types.
@@ -255,7 +255,7 @@ function M.setup(config)
     -- TSTag               = { };    -- Tags like html tag names.
     -- TSTagDelimiter      = { };    -- Tag delimiter like `<` `>` `/`
     -- TSText              = { };    -- For strings considered text in a markup language.
-    TSTextReference = { fg = c.purple1 },
+    TSTextReference = { fg = c.purple },
     -- TSEmphasis          = { };    -- For text to be represented with emphasis.
     -- TSUnderline         = { };    -- For text to be represented with an underline.
     -- TSStrike            = { };    -- For strikethrough text.
