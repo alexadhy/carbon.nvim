@@ -6,34 +6,34 @@ local carbon = {}
 
 carbon.normal = {
   a = { bg = colors.cyan1, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.cyan1 },
+  b = { bg = colors.bg_highlight, fg = colors.cyan1 },
   c = { bg = colors.bg_statusline, fg = colors.fg_sidebar },
 }
 
 carbon.insert = {
   a = { bg = colors.green1, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.green1 },
+  b = { bg = colors.bg_highlight, fg = colors.green1 },
 }
 
 carbon.command = {
   a = { bg = colors.orange, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.orange },
+  b = { bg = colors.bg_highlight, fg = colors.orange },
 }
 
 carbon.visual = {
   a = { bg = colors.magenta, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.magenta },
+  b = { bg = colors.bg_highlight, fg = colors.magenta },
 }
 
 carbon.replace = {
   a = { bg = colors.red, fg = colors.black },
-  b = { bg = colors.fg_gutter, fg = colors.red },
+  b = { bg = colors.bg_highlight, fg = colors.red },
 }
 
 carbon.inactive = {
   a = { bg = colors.bg_statusline, fg = colors.purple },
-  b = { bg = colors.bg_statusline, fg = colors.fg_gutter, gui = "bold" },
-  c = { bg = colors.bg_statusline, fg = colors.fg_gutter },
+  b = { bg = colors.bg_statusline, fg = colors.bg_highlight, gui = "bold" },
+  c = { bg = colors.bg_statusline, fg = colors.bg_highlight },
 }
 
 if vim.o.background == "light" then
