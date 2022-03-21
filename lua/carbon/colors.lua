@@ -77,7 +77,7 @@ function M.setup(config)
   colors.bg_float = config.darkFloat and colors.bg_dark or colors.bg
 
   colors.bg_visual = util.darken(colors.blue0, 0.8)
-  colors.bg_search = colors.gitSigns.add
+  colors.bg_search = util.darken(colors.blue0, 0.6)
   colors.fg_sidebar = colors.fg_dark
 
   colors.error = colors.red2

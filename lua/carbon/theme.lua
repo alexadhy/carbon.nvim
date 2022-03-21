@@ -85,6 +85,7 @@ function M.setup(config)
     Constant = { fg = c.purple }, -- (preferred) any constant
     String = { fg = c.cyan1 }, --   a string constant: "this is a string"
     Character = { fg = c.cyan }, --  a character constant: 'c', '\n'
+    Number = { fg = c.yellow, style = "bold" },
     -- Number        = { }, --   a number constant: 234, 0xff
     -- Boolean       = { }, --  a boolean constant: TRUE, false
     -- Float         = { }, --    a floating point constant: 2.3e10
@@ -96,8 +97,8 @@ function M.setup(config)
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
-    Operator = { fg = c.green }, -- "sizeof", "+", "*", etc.
-    Keyword = { fg = c.cyan, style = config.keywordStyle }, --  any other keyword
+    Operator = { fg = c.fg }, -- "sizeof", "+", "*", etc.
+    Keyword = { fg = c.magenta, style = config.keywordStyle }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
     PreProc = { fg = c.red }, -- (preferred) generic Preprocessor
@@ -205,9 +206,8 @@ function M.setup(config)
     -- TSError -> Error for example, so you do not have to define these unless
     -- you explicitly want to support Treesitter's improved syntax awareness.
 
-    
     TSAnnotation = { fg = c.yellow }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
-    -- TSAnnotation        = { };    
+    -- TSAnnotation        = { };
     -- TSAttribute         = { };    -- (unstable) TODO: docs
     -- TSBoolean           = { };    -- For booleans.
     -- TSCharacter         = { };    -- For characters.
@@ -232,11 +232,11 @@ function M.setup(config)
     TSKeywordFunction = { fg = c.yellow, style = config.functionStyle }, -- For keywords used to define a fuction.
     TSLabel = { fg = c.cyan1 }, -- For labels: `label:` in C and `:label:` in Lua.
     -- TSMethod            = { };    -- For method calls and definitions.
-    -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
+    TSNamespace         = { c.green };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    TSOperator = { fg = c.green }, -- For any operator: `+`, but also `->` and `*` in C.
-    TSParameter = { fg = c.green2 }, -- For parameters of a function.
+    TSOperator = { fg = c.fg }, -- For any operator: `+`, but also `->` and `*` in C.
+    TSParameter = { fg = c.cyan2 }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = { fg = c.purple1 }, -- Same as `TSField`.
     -- TSPunctDelimiter = { fg = c.blue5 }, -- For delimiters ie: `.`
@@ -419,7 +419,7 @@ function M.setup(config)
     LightspeedShortcut = { bg = c.magenta, fg = c.fg, style = "bold,underline" },
     -- LightspeedShortcutOverlapped = { link = "LightspeedShortcut" },
     -- LightspeedUniqueChar = { link = "LightspeedUnlabeledMatch" },
-    LightspeedUnlabeledMatch = { fg = c.blue2, style = "bold" },
+    LightspeedUnlabeledMatch = { fg = c.blue0, style = "bold" },
 
     -- Cmp
     CmpDocumentation = { fg = c.fg, bg = c.bg_float },
