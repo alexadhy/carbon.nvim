@@ -96,7 +96,7 @@ function M.setup(config)
     -- Conditional   = { }, --  if, then, else, endif, switch, etc.
     -- Repeat        = { }, --   for, do, while, etc.
     -- Label         = { }, --    case, default, etc.
-    Operator = { bg = c.gitSigns.change }, -- "sizeof", "+", "*", etc.
+    Operator = { fg = c.green }, -- "sizeof", "+", "*", etc.
     Keyword = { fg = c.cyan, style = config.keywordStyle }, --  any other keyword
     -- Exception     = { }, --  try, catch, throw
 
@@ -220,7 +220,7 @@ function M.setup(config)
     -- TSConstMacro        = { };    -- For constants that are defined by macros: `NULL` in C.
     -- TSError             = { };    -- For syntax/parser errors.
     -- TSException         = { };    -- For exception related keywords.
-    TSField = { fg = c.purple1 }, -- For fields.
+    TSField = { fg = c.fg1 }, -- For fields.
     -- TSFloat             = { };    -- For floats.
     -- TSFunction          = { };    -- For function (calls and definitions).
     -- TSFuncBuiltin       = { };    -- For builtin functions: `table.insert` in Lua.
@@ -425,8 +425,8 @@ function M.setup(config)
 
     CmpItemAbbr = { fg = c.fg, bg = c.none },
     CmpItemAbbrDeprecated = { fg = c.fg_gutter, bg = c.none, style = "strikethrough" },
-    CmpItemAbbrMatch = { fg = c.orange, bg = c.none },
-    CmpItemAbbrMatchFuzzy = { fg = c.orange, bg = c.none },
+    CmpItemAbbrMatch = { fg = c.red, bg = c.none },
+    CmpItemAbbrMatchFuzzy = { fg = c.red, bg = c.none },
 
     CmpItemKindDefault = { fg = c.fg_dark, bg = c.none },
     CmpItemMenu = { fg = c.comment, bg = c.none },
