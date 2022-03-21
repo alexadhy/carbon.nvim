@@ -205,7 +205,9 @@ function M.setup(config)
     -- TSError -> Error for example, so you do not have to define these unless
     -- you explicitly want to support Treesitter's improved syntax awareness.
 
-    -- TSAnnotation        = { };    -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+    
+    TSAnnotation = { fg = c.yellow }, -- For C++/Dart attributes, annotations that can be attached to the code to denote some kind of meta information.
+    -- TSAnnotation        = { };    
     -- TSAttribute         = { };    -- (unstable) TODO: docs
     -- TSBoolean           = { };    -- For booleans.
     -- TSCharacter         = { };    -- For characters.
@@ -233,7 +235,7 @@ function M.setup(config)
     -- TSNamespace         = { };    -- For identifiers referring to modules and namespaces.
     -- TSNone              = { };    -- TODO: docs
     -- TSNumber            = { };    -- For all numbers
-    TSOperator = { bg = c.gitSigns.change }, -- For any operator: `+`, but also `->` and `*` in C.
+    TSOperator = { fg = c.green }, -- For any operator: `+`, but also `->` and `*` in C.
     TSParameter = { fg = c.green2 }, -- For parameters of a function.
     -- TSParameterReference= { };    -- For references to parameters of a function.
     TSProperty = { fg = c.purple1 }, -- Same as `TSField`.
@@ -373,7 +375,7 @@ function M.setup(config)
     healthWarning = { fg = c.warning },
 
     -- BufferLine
-    BufferLineIndicatorSelected = { fg = c.green2 },
+    BufferLineIndicatorSelected = { fg = c.green },
     BufferLineFill = { bg = c.black },
 
     -- Barbar
